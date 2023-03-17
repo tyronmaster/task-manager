@@ -74,7 +74,7 @@ button,
   margin: 5px;
   cursor: pointer;
   color: var(--color-dark-l);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 18px;
   transition: 0.5s ease-in-out;
 }
@@ -94,26 +94,27 @@ svg:hover path {
 }
 input {
   background: none;
-  border: 1px solid var(--main-color);
+  border: 1px solid var(--color-dark-l);
   border-radius: 10px;
   padding: 15px;
-  padding-right: 45px;
-  color: var(--focus-color);
+  /* padding-right: 45px; */
+  color: var(--color-dark-l);
   text-transform: uppercase;
-  margin: 0 15px;
-  width: 250px;
+  /* margin: 0 15px; */
+  /* width: 250px; */
+  width: 100%;
   transition: 1s;
 }
 input:hover,
 input:focus {
-  border-color: var(--focus-color);
+  border-color: var(--color-light-aqua);
 }
 input::placeholder {
-  color: var(--main-color);
+  color: var(--color-dark-l);
   text-transform: uppercase;
 }
 input:placeholder-shown {
-  color: var(--main-color);
+  color: var(--color-dark-l);
   text-transform: uppercase;
 }
 ul li {
@@ -210,4 +211,39 @@ body {
   font-weight: 900;
   font-size: 24px;
   color: var(--color-light-aqua);
+}
+
+.main{
+  flex: 1 auto;
+}
+
+.form__section, form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+}
+.form{
+  max-width: 250px;
+  width: 100%;
+}
+.form:nth-child(2n){
+  margin-bottom: 10px;
+}
+.form__title{
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+.form__label{
+  margin-bottom: 5px;
+}
+.form__input{
+  margin-bottom: 20px;
+}
+.button__submit{
+  /* width: 100%; */
+text-align: center;
 }

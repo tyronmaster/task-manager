@@ -1,0 +1,28 @@
+<section class="form__section">
+  <h2 class="form__title">User Registration</h2>
+  <!-- <form class="form form__signup" #userRegistrationForm="ngForm" (ngSubmit)="OnSubmit(userRegistrationForm)">
+          <div class="input-field col s6">
+            <input class="validate" type="text" name="UserName" #UserName="ngModel" [(ngModel)]="user.UserName" required>
+            <label data-error="Required field!">UserName</label>
+          </div>
+          <div class="input-field col s6">
+            <input class="validate" type="password" name="Password" #Password="ngModel" [(ngModel)]="user.Password" required  minlength="3">
+            <label [attr.data-error]="Password.errors!=null?(Password.errors['required']?'Required field!':'Minimum 3 characters needed'):''">Password</label>
+          </div>
+          <button [disabled]="!userRegistrationForm.valid" class="button button__submit" type="submit">Submit</button>
+</form> -->
+
+  <form class="form form__signup">
+
+    <label class="form__label" data-error="Required field!" for="username">UserName</label>
+    <input class="form__input validate" id="username" type="text" name="UserName" required>
+
+    <label class="form__label" data-error="Required field!" for="login">Login</label>
+    <input class="form__input validate" id="login" type="text" name="Login" required>
+
+    <label class="form__label" for="password">Password</label>
+    <input class="form__input validate" id="password" type="password" name="Password" required minlength="3">
+
+    <a class="button button__submit" type="submit">Submit</a>
+  </form>
+</section>
