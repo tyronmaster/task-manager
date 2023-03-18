@@ -1,1 +1,14 @@
-<p>login works!</p>
+<section class="form__section">
+  <h2 class="form__title">User Login</h2>
+
+  <form class="form form__login">
+
+    <label class="form__label" data-error="Required field!" for="login">Login</label>
+    <input class="form__input validate" id="login" type="text" name="Login" required>
+
+    <label class="form__label" for="password">Password</label>
+    <input class="form__input validate" id="password" type="password" name="Password" required minlength="3">
+
+    <a class="button button__submit" type="submit">Submit</a>
+  </form>
+</section>
