@@ -16,6 +16,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { TaskboardComponent } from './components/taskboard/taskboard.component';
+import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -49,7 +50,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
+    useClass: JwtInterceptor,
     multi: true,
   }],
   bootstrap: [AppComponent]

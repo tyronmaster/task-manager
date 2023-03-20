@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { ApiService } from 'src/app/core/services/api.service';
 
 @Component({
   selector: 'app-taskboard',
@@ -8,20 +9,15 @@ import { Component } from '@angular/core';
 })
 export class TaskboardComponent {
 
-  message: string = '';
-  messages: string[] = [];
-  private uri: string = 'https://task-backend-production-ca65.up.railway.app/';
-
-
-  constructor(private http: HttpClient) { }
+  result = '';
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    // this.http.get(this.uri + 'users', { withCredentials: true })
-    this.http.get(this.uri + 'users')
-    .subscribe((res: any) => {
-      this.message = JSON.stringify(res);
-      this.messages = this.message.split(',');
-    })
+    this.apiService.getUsers().
+    subscribe((data) => {
+      console.log(JSON.stringify(data));
+      this.result = JSON.stringify(data)
+    });
   }
 
 }

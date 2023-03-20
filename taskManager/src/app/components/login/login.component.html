@@ -1,15 +1,15 @@
 <section class="form__section">
   <h2 class="form__title">User Login</h2>
 
-  <form class="form form__signin" [formGroup]="form">
+  <form class="form form__signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
     <label class="form__label" for="login">Login</label>
-    <input class="form__input validate" id="login" type="text" name="Login" formControlName="login" required>
+    <input class="form__input" id="login" type="text" name="login" formControlName="login">
 
     <label class="form__label" for="password">Password</label>
-    <input class="form__input validate" id="password" type="password" name="Password" formControlName="password" required minlength="3">
+    <input class="form__input" id="password" type="password" name="password" formControlName="password" minlength="3">
 
-    <button class="button button__submit" type="submit"  (click)="submit()">Submit</button>
+    <button class="button button__submit" type="submit">Submit</button>
 
   </form>
 </section>
