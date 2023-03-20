@@ -99,7 +99,7 @@ input {
   padding: 15px;
   /* padding-right: 45px; */
   color: var(--color-dark-l);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   /* margin: 0 15px; */
   /* width: 250px; */
   width: 100%;
@@ -111,11 +111,11 @@ input:focus {
 }
 input::placeholder {
   color: var(--color-dark-l);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 input:placeholder-shown {
   color: var(--color-dark-l);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 ul li {
   list-style: none;

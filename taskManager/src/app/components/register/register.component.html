@@ -12,17 +12,18 @@
           <button [disabled]="!userRegistrationForm.valid" class="button button__submit" type="submit">Submit</button>
 </form> -->
 
-  <form class="form form__signup">
+  <form class="form form__signup" [formGroup]="form">
 
-    <label class="form__label" data-error="Required field!" for="username">UserName</label>
-    <input class="form__input validate" id="username" type="text" name="UserName" required>
+    <label class="form__label" for="username">UserName</label>
+    <input class="form__input validate" id="username" type="text" name="UserName" formControlName="name" required>
 
-    <label class="form__label" data-error="Required field!" for="login">Login</label>
-    <input class="form__input validate" id="login" type="text" name="Login" required>
+    <label class="form__label" for="login">Login</label>
+    <input class="form__input validate" id="login" type="text" name="Login" formControlName="login" required>
 
     <label class="form__label" for="password">Password</label>
-    <input class="form__input validate" id="password" type="password" name="Password" required minlength="3">
+    <input class="form__input validate" id="password" type="password" name="Password" formControlName="password" required minlength="3">
 
-    <a class="button button__submit" type="submit">Submit</a>
+    <button class="button button__submit" type="submit"  (click)="submit()">Submit</button>
+
   </form>
 </section>
