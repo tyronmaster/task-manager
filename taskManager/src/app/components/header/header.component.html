@@ -40,9 +40,10 @@
       <span class="language__check base"></span>
       <div class="language__title pl selected">pl</div>
     </div>
-    <div class="header__buttons">
+    <div class="header__buttons" [class.]="{'isactive' : isLogged$ | async}">
       <a class="button signin"  routerLink="/login">Login</a>
       <a class="button signup"  routerLink="/register">Register</a>
+      <a class="button logout"  routerLink="/" (click)="logout()">Logout</a>
     </div>
   </div>
 </header>

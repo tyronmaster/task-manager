@@ -15,8 +15,8 @@ export class TaskboardComponent {
   ngOnInit() {
     this.apiService.getUsers().
     subscribe((data) => {
-      console.log(JSON.stringify(data));
-      this.result = JSON.stringify(data)
+      // console.log(JSON.stringify(data));
+      this.result = JSON.stringify(data);
     });
   }
 

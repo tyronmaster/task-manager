@@ -14,9 +14,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/form/form.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { AuthInterceptor } from './interceptor/auth.interceptor';
+// import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { TaskboardComponent } from './components/taskboard/taskboard.component';
 import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
+import { StateService } from './core/services/state.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);

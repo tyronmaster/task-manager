@@ -10,7 +10,10 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+  // USERS section
   getUsers() {
     return this.http.get<User[]>(URI + 'users');
   }
+  
+
 }
