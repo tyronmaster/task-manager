@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ApiService } from 'src/app/core/services/api.service';
+import { User } from 'src/app/models/user.model';
+
 
 @Component({
   selector: 'app-taskboard',
@@ -9,15 +10,18 @@ import { ApiService } from 'src/app/core/services/api.service';
 })
 export class TaskboardComponent {
 
+  // result: User[] = [];
   result = '';
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.apiService.getUsers().
-    subscribe((data) => {
-      // console.log(JSON.stringify(data));
-      this.result = JSON.stringify(data);
-    });
+      subscribe((data) => {
+        // const login = localStorage.getItem('userame');
+        // console.log(data, ' hm', typeof data, 'login ', login);
+        // this.result = data;
+        this.result = JSON.stringify(data);
+      });
   }
 
 }

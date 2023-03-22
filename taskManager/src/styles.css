@@ -48,7 +48,7 @@ header,
 section {
   display: block;
 }
-section{
+section {
   min-height: calc(100vh - var(--header-height));
 }
 a {
@@ -69,11 +69,12 @@ button,
 .button {
   background: none;
   border: 1px solid var(--color-dark-l);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 5px 15px;
   margin: 5px;
   cursor: pointer;
   color: var(--color-dark-l);
+  font-family: "Montserrat", sans-serif;
   /* text-transform: uppercase; */
   font-size: 18px;
   transition: 0.5s ease-in-out;
@@ -83,6 +84,7 @@ button:hover,
 button:active,
 .button:active {
   border: 1px solid var(--color-light-aqua);
+  color: var(--color-light-aqua);
   transition: 0.5s ease-in-out;
 }
 svg path {
@@ -99,6 +101,7 @@ input {
   padding: 15px;
   /* padding-right: 45px; */
   color: var(--color-dark-l);
+  font-family: "Montserrat", sans-serif;
   /* text-transform: uppercase; */
   /* margin: 0 15px; */
   /* width: 250px; */
@@ -164,7 +167,7 @@ body {
   flex-direction: column;
   min-height: 100vh; */
 }
-.section__title{
+.section__title {
   font-weight: 700;
   font-size: 36px;
   margin-bottom: 100px;
@@ -178,7 +181,7 @@ body {
   align-items: center;
   padding: 5px;
   cursor: pointer;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .logo svg .st0 {
   fill: var(--color-dark-l);
@@ -192,9 +195,9 @@ body {
 .logo:hover svg .st1 {
   /* fill: var(--color-dark-l); */
 }
-.logo:hover .logo__title{
+.logo:hover .logo__title {
   color: var(--color-dark);
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .logo__image {
   width: 40px;
@@ -205,7 +208,7 @@ body {
   font-size: 24px;
   margin-left: 15px;
   color: var(--color-dark-l);
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .logo__title span {
   font-weight: 900;
@@ -213,37 +216,38 @@ body {
   color: var(--color-light-aqua);
 }
 
-.main{
+.main {
   flex: 1 auto;
 }
 
-.form__section, form{
+.form__section,
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* text-align: center; */
 }
-.form{
+.form {
   max-width: 250px;
   width: 100%;
 }
-.form:nth-child(2n){
+.form:nth-child(2n) {
   margin-bottom: 10px;
 }
-.form__title{
+.form__title {
   font-weight: 700;
   font-size: 36px;
   margin-bottom: 50px;
   text-transform: capitalize;
 }
-.form__label{
+.form__label {
   margin-bottom: 5px;
 }
-.form__input{
+.form__input {
   margin-bottom: 20px;
 }
-.button__submit{
+.button__submit {
   /* width: 100%; */
-text-align: center;
+  text-align: center;
 }

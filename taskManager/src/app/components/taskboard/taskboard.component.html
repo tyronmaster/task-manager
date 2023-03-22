@@ -1,7 +1,28 @@
-<section class="taskboard" >
-  <p>taskboard works!</p>
-  <!-- <div *ngFor="let mess of messages; let i = index">
-    <p><span>{{ i + 1}} RESPONSE</span>{{ mess }}</p>
-  </div> -->
-  {{ result }}
+<section class="taskboard">
+  <form class="task__form">
+    <input class="task__input" type="text" placeholder="New task to add">
+    <button class="button button__submit" type="submit">Add task</button>
+  </form>
+  <div class="boards">
+    <ul class="task__list todo">
+      <li class="task__item">
+        <input class="task__checkbox done" type="checkbox" checked>
+        <h3 class="task__title">Test taskTest taskTest task</h3>
+        <button class="button button__remove">X</button>
+      </li>
+      <li class="task__item">
+        <input class="task__checkbox done" type="checkbox" checked>
+        <h3 class="task__title">Test task</h3>
+        <button class="button button__remove">X</button>
+      </li>
+    </ul>
+    <ul class="task__list done">
+      <li class="task__item">
+        <input class="task__checkbox done" type="checkbox" checked>
+        <h3 class="task__title">Test task</h3>
+        <button class="button button__remove">X</button>
+      </li>
+    </ul>
+  </div>
+  <!-- {{ result }} -->
 </section>

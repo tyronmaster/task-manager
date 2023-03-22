@@ -36,9 +36,10 @@ export class LoginComponent {
       .subscribe((response: any) => {
         this.userService.setToken(response.token);
         this.userService.setLogin(this.loginForm.getRawValue().login || '');
+        
         const logged = this.state.isLogged$.getValue();
         this.state.isLogged$.next(!logged);
-    console.log(logged);
+        console.log(logged);
         // console.log('login succesfully', response.token);
         // console.log(this.loginForm.getRawValue());
         this.router.navigate(['/taskboard']);

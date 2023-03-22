@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormComponent } from './components/form/form.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 // import { AuthInterceptor } from './interceptor/auth.interceptor';
@@ -29,7 +28,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    FormComponent,
     LoginComponent,
     RegisterComponent,
     TaskboardComponent
