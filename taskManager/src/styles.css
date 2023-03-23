@@ -78,6 +78,13 @@ button,
   /* text-transform: uppercase; */
   font-size: 18px;
   transition: 0.5s ease-in-out;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 button:hover,
 .button:hover,

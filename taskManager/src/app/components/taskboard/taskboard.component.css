@@ -1,8 +1,19 @@
 .taskboard {
+  padding-top: 100px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  /* max-height: 70vh; */
+  /* overflow-y: auto; */
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 .task__form {
   display: flex;
@@ -27,7 +38,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
   width: 100%;
 }
@@ -61,7 +72,6 @@
   /* white-space: nowrap; */
   line-height: 22px;
 /* text-align: left; */
-
   margin: 0 10px;
 }
 .task__checkbox {

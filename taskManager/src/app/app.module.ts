@@ -17,6 +17,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { TaskboardComponent } from './components/taskboard/taskboard.component';
 import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 import { StateService } from './core/services/state.service';
+import { AddTaskFormComponent } from './components/add-task-form/add-task-form.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -30,7 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    TaskboardComponent
+    TaskboardComponent,
+    AddTaskFormComponent
   ],
   imports: [
     BrowserModule,
