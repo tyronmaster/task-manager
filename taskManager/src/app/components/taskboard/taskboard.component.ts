@@ -13,29 +13,19 @@ import { User } from 'src/app/models/user.model';
 })
 
 export class TaskboardComponent {
-  taskTitle = '';
   tasksList: Task[] = [];
-  counter = 0;
 
-  onSubmit() {
-    // const activeUser = this.user.getLogin() || ''
-    const newTask: Task = {
-      id: this.counter,
-      title: this.taskTitle,
-      isCompleted: false,
-    }
-    this.counter++;
-    this.tasksList.push(newTask);
-    this.taskTitle = '';
-    console.log(this.tasksList);
-  }
-  removeTask(id: number) {
+
+  onRemoveTaskItem( id: number) {
     this.tasksList = this.tasksList.filter(item => item.id !== id);
   }
-  setTaskStatus(task: Task){
-    task.isCompleted = !task.isCompleted;
+
+  onAddTask(task: Task) {
+    // this.tasksList.push(task);
+    this.tasksList = [...this.tasksList, task];
     console.log(this.tasksList);
   }
+
   // result: User[] = [];
   result = '';
   constructor(private apiService: ApiService, private user: UserService) { }

@@ -1,28 +1,7 @@
 <section class="taskboard">
-  <form class="task__form" (submit)="onSubmit()">
-    <input class="task__input" type="text" placeholder="New task to add" [(ngModel)]="taskTitle" name="taskTitle">
-    <button class="button button__submit" type="submit">Add task</button>
-  </form>
-  <div class="boards">
-    <ul class="task__list todo">
-      <li class="task__item" *ngFor="let task of tasksList">
-        <input class="task__checkbox done" type="checkbox" (change)="setTaskStatus(task)">
-        <h3 class="task__title">{{task.id + 1}} - {{task.title}}</h3>
-        <button class="button button__remove" (click)="removeTask(task.id)">X</button>
-      </li>
-      <!-- <li class="task__item">
-        <input class="task__checkbox done" type="checkbox" checked>
-        <h3 class="task__title">{{taskTitle}}</h3>
-        <button class="button button__remove">X</button>
-      </li> -->
-    </ul>
-    <ul class="task__list done">
-      <li class="task__item">
-        <input class="task__checkbox done" type="checkbox" checked>
-        <h3 class="task__title">Test task</h3>
-        <button class="button button__remove">X</button>
-      </li>
-    </ul>
-  </div>
+
+  <app-add-task-form (addTask)="onAddTask($event)"></app-add-task-form>
+  <app-tasklist class="tasklist__container" [tasksList]="tasksList"></app-tasklist>
+
   <!-- {{ result }} -->
 </section>

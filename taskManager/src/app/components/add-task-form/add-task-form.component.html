@@ -1,1 +1,4 @@
-<p>add-task-form works!</p>
+<form class="task__form" (submit)="onSubmit()">
+  <input class="task__input" type="text" placeholder="New task to add" [(ngModel)]="taskTitle" name="taskTitle">
+  <button class="button button__submit" type="submit">Add task</button>
+</form>

@@ -84,13 +84,7 @@
 .signup {
   display: flex;
 }
-.isactive .signin,
-.isactive .signup {
-  display: none;
-}
 .logout {
   display: none;
 }
-.isactive .logout {
-  display: flex;
-}
+

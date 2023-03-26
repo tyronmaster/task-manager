@@ -14,6 +14,15 @@ export class AppComponent {
 
   defaultLanguage = 'en';
   visibility: boolean = true;
+  logged: boolean = false;
+
+  ngOnInit(){
+    this.logged = localStorage.getItem('username') ? true : false;
+  }
+
+  ngOnChanges() {
+    this.logged = localStorage.getItem('username') ? true : false;
+  }
 
   onChangeLanguage() {
     this.defaultLanguage = this.defaultLanguage === 'en' ? 'pl' : 'en';

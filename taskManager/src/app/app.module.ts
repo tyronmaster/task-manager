@@ -18,6 +18,10 @@ import { TaskboardComponent } from './components/taskboard/taskboard.component';
 import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 import { StateService } from './core/services/state.service';
 import { AddTaskFormComponent } from './components/add-task-form/add-task-form.component';
+import { TasklistComponent } from './components/tasklist/tasklist.component';
+import { TaskitemComponent } from './components/taskitem/taskitem.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -32,7 +36,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     LoginComponent,
     RegisterComponent,
     TaskboardComponent,
-    AddTaskFormComponent
+    AddTaskFormComponent,
+    TasklistComponent,
+    TaskitemComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +46,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    DragDropModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -48,6 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
       defaultLanguage: 'pl',
     }),
+    BrowserAnimationsModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

@@ -1,0 +1,5 @@
+<li class="task__item" [class.completed]="task.isCompleted">
+  <input class="task__checkbox done" type="checkbox" (change)="onSetTaskStatus()" [checked]="task.isCompleted">
+  <h3 class="task__title">{{task.id + 1}} - {{task.title}}</h3>
+  <button class="button button__remove" (click)="onRemoveTask()">X</button>
+</li>

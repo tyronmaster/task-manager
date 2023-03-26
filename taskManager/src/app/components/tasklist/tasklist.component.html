@@ -1,0 +1,18 @@
+<div class="boards">
+  <div class="board__todo">
+    <h2 class="board__title">Tasks todo</h2>
+    <ul class="task__list todo" cdkDropList (cdkDropListDropped)="drop($event)" [cdkDropListData]="todoTasks">
+      <app-taskitem class="taskitem__component" *ngFor="let task of todoTasks" [task]="task"
+        (setTaskStatus)="onSetTaskStatus(task)" (rmTask)="onRemoveTaskItem(task.id)" cdkDrag>
+      </app-taskitem>
+    </ul>
+  </div>
+  <div class="board__todo">
+    <h2 class="board__title">Tasks completed</h2>
+    <ul class="task__list todo" cdkDropList (cdkDropListDropped)="drop($event)" [cdkDropListData]="completedTasks">
+      <app-taskitem class="taskitem__component" *ngFor="let task of completedTasks" [task]="task"
+        (setTaskStatus)="onSetTaskStatus(task)" (rmTask)="onRemoveTaskItem(task.id)" cdkDrag>
+      </app-taskitem>
+    </ul>
+  </div>
+</div>

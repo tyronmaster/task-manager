@@ -1,6 +1,6 @@
 <div class="wrapper">
 
-  <app-header></app-header>
+  <app-header [class]="{'isactive': logged}"></app-header>
   <main class="main">
     <router-outlet></router-outlet>
   </main>

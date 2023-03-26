@@ -258,3 +258,16 @@ form {
   /* width: 100%; */
   text-align: center;
 }
+
+/*HEADER LOGOUT */
+.isactive .signin,
+.isactive .signup {
+  display: none;
+}
+.isactive .logout {
+  display: flex;
+}
+
+/*
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
