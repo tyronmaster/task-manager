@@ -1,7 +1,7 @@
 <section class="taskboard">
 
   <app-add-task-form (addTask)="onAddTask($event)"></app-add-task-form>
-  <app-tasklist class="tasklist__container" [tasksList]="tasksList"></app-tasklist>
+  <app-tasklist class="tasklist__container" [tasksList]="tasksList" (statusSet)="onSetStatus($event)"></app-tasklist>
 
   <!-- {{ result }} -->
 </section>

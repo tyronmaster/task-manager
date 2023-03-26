@@ -21,7 +21,8 @@ import { AddTaskFormComponent } from './components/add-task-form/add-task-form.c
 import { TasklistComponent } from './components/tasklist/tasklist.component';
 import { TaskitemComponent } from './components/taskitem/taskitem.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TasksFilterPipe } from './core/pipes/tasks-filter.pipe'
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -38,7 +39,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     TaskboardComponent,
     AddTaskFormComponent,
     TasklistComponent,
-    TaskitemComponent
+    TaskitemComponent,
+    TasksFilterPipe
   ],
   imports: [
     BrowserModule,

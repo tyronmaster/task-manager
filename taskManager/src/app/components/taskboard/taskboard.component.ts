@@ -15,29 +15,27 @@ import { User } from 'src/app/models/user.model';
 export class TaskboardComponent {
   tasksList: Task[] = [];
 
-
-  onRemoveTaskItem( id: number) {
+  onRemoveTaskItem(id: number) {
     this.tasksList = this.tasksList.filter(item => item.id !== id);
   }
 
   onAddTask(task: Task) {
-    // this.tasksList.push(task);
     this.tasksList = [...this.tasksList, task];
     console.log(this.tasksList);
   }
 
-  // result: User[] = [];
   result = '';
   constructor(private apiService: ApiService, private user: UserService) { }
 
   ngOnInit() {
     this.apiService.getUsers().
       subscribe((data) => {
-        // const login = localStorage.getItem('userame');
-        // console.log(data, ' hm', typeof data, 'login ', login);
-        // this.result = data;
         this.result = JSON.stringify(data);
       });
+  }
+
+  onSetStatus(task: Task) {
+    this.tasksList = this.tasksList.map((item) => task.id === item.id ? { ...item, isCompleted: !item.isCompleted } : item);
   }
 
 }
