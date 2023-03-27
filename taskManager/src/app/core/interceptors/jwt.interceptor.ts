@@ -27,25 +27,6 @@ export class JwtInterceptor implements HttpInterceptor {
         }),
       });
       return next.handle(requestWithToken)
-      // .
-      //   pipe(catchError((err: HttpErrorResponse) => {
-      //     if (err.status === 403) {
-      //       return this.http.post(URI + 'auth/signin', {}).
-      //         pipe(switchMap((res: any) => {
-      //           this.userService.setToken(res.token);
-      //           const newToken = this.userService.getToken();
-      //           return next.handle(request.clone({
-      //             setHeaders: {
-      //               Authorization: `Bearer ${newToken}`,
-      //               'Content-Type': 'application/json',
-      //             }
-      //           })
-      //           )
-      //         })
-      //         );
-      //     }
-      //     return throwError(() => err);
-      //   }));
     }
     return next.handle(request);
   }
